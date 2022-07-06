@@ -6,13 +6,14 @@
 #include <stdarg.h>
 #include <string.h>
 
-typedef struct op
+typedef struct print
 {
-	char *op;
-	int (*f)(int a, int b);
-} op_t;
+	char *format;
+	int (*)(int a, int b);
+} format_t;
 
-int _printf(const char *format, ...);int _putchar(char c);
+int _printf(const char *format, ...);
+int _putchar(char c);
 
 int print_char(va_list);
 int print_string(va_list);
