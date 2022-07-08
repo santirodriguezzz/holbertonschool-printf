@@ -37,9 +37,9 @@ int _printf(const char *format, ...)
 int auxs(va_list list, char c)
 {
 	s_t est[] = {
-		{"s", print_str},
-		{"c", print_ch},
-		{"%", print_per},
+		{'s', print_str},
+		{'c', print_ch},
+		{'%', print_per},
 	};
 	int j = 0;
 
