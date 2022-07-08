@@ -29,11 +29,17 @@ int _printf(const char *format, ...)
 			_putchar(format[y]);
 		}
 	}
+	if (format == NULL)
+	{
+		return (-1);
+	}
 	va_end(list);
 	return (count);
 }
 /**
  * auxs - auxiliar function
+ * @c: char
+ * @list: name of list of the function
  * Return: integer
  */
 int auxs(va_list list, char c)
