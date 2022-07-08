@@ -35,7 +35,7 @@ int _printf(const char *format, ...)
  * auxs - auxiliar function
  * Return: int
  */
-int (*auxs(va_list))(int, int)
+int (*auxs(va_list))(char, int)
 {
 	s_t est[] = {
 		{'s', print_str},
