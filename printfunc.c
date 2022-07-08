@@ -58,4 +58,18 @@ int print_per(va_list list)
 		}
 	}
 	return (0);
+/**
+*
+*
+*
+*/
+int print_num(va_list list)
+{
+	int n = va_arg(list, int);
+
+	if (n < 0)
+	{
+		putchar('-');
+		return
+	}
 }
