@@ -15,7 +15,6 @@ int _printf(const char *format, ...)
 		if (format[y] == '%' && (format[y + 1] == 0 || format[y + 1] == '%'))
 		{
 			_putchar('%');
-			y++;
 			count++;
 		}
 		else if (format[y] == '%')
