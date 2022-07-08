@@ -30,7 +30,7 @@ int _printf(const char *format, ...)
 			_putchar(format[y]);
 		}
 	}
-	if (format == NULL)
+	if (format == NULL || !(strcmp(format, "%")))
 	{
 		return (-1);
 	}
