@@ -56,15 +56,9 @@ int auxs(va_list list, char c)
 	{
 		if (est[j].h == c)
 			return (est[j].x(list));
-			j++;
+		j++;
 	}
 	_putchar('%');
 	_putchar(c);
 	return (2);
 }
-/**
- *
- */
-int print_num(int n)
-{
-
