@@ -1,7 +1,7 @@
 #include "main.h"
 /**
 * print_ch - prints char
-* @list
+* @list: list of functions
 * Return: int
 */
 int print_ch(va_list list)
@@ -18,6 +18,7 @@ int print_str(va_list list)
 {
 	char *z, *null = "(null)";
 	int l, len;
+
 	z = va_arg(list, char *);
 
 	if (z == NULL)
@@ -36,7 +37,7 @@ int print_str(va_list list)
 }
 /**
 * print_per - prints %
-* @list: list
+* @list: list of functions
 * Return: int
 */
 

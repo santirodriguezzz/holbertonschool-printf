@@ -1,15 +1,15 @@
 #include "main.h"
 /**
 * _printf - function that prints a string
-* @*format: constant
+* @format: constant string
 * Return: count
 **/
 int _printf(const char *format, ...)
 {
 	va_list list;
 	int y, count;
-	
-	for(y = 0; format[y]; y++)
+
+	for (y = 0; format[y]; y++)
 	{
 		if (format[y] == '%' && (format[y + 1] == 0 || format[y + 1] == '%'))
 		{
@@ -30,6 +30,10 @@ int _printf(const char *format, ...)
 	va_end(list);
 	return (count);
 }
+/**
+ * auxs - auxiliar function
+ * Return: int
+ */
 int auxs(va_list list, char c)
 {
 	s_t est[] = {
@@ -41,11 +45,11 @@ int auxs(va_list list, char c)
 
 	while (j < 3)
 	{
-		if (*est[j].h == c)
+		if (est[j].h == c)
 			return (est[j].x(list));
 		j++;
 	}
 	_putchar('%');
 	_putchar(c);
 	return (2);
-}	
+}
