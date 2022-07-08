@@ -20,6 +20,7 @@ int _printf(const char *format, ...)
 		else if (format[y] == '%')
 		{
 			count += auxs(list, format[y + 1]);
+			y++;
 		}
 		else
 		{
