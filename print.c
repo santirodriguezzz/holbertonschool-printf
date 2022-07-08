@@ -33,7 +33,7 @@ int _printf(const char *format, ...)
 }
 /**
  * auxs - auxiliar function
- * Return: int
+ * Return: integer
  */
 int (*auxs(char c))(va_list)
 {

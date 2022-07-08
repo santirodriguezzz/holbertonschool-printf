@@ -10,7 +10,7 @@
 typedef struct structure
 {
 	char h;
-	int (*x)(va_list list);
+	int (*x)(va_list);
 } s_t;
 int _printf(const char *format, ...);
 int _putchar(char c);
