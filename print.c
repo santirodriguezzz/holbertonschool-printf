@@ -20,7 +20,7 @@ int _printf(const char *format, ...)
 		}
 		else if (format[y] == '%')
 		{
-			count += auxs(format[y + 1]);
+			count += auxs(list, format[y + 1]);
 		}
 		else
 		{
@@ -35,7 +35,7 @@ int _printf(const char *format, ...)
  * auxs - auxiliar function
  * Return: integer
  */
-int (*auxs(char c))(va_list)
+int auxs(va_list list, char c)
 {
 	s_t est[] = {
 		{'s', print_str},
