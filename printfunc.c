@@ -61,8 +61,7 @@ int print_per(va_list list)
 }
 /**
  * print_num - prints an int
- * @n: int
- * @i: int
+ * @list: argument
  * Return: int
  */
 int print_num(va_list list)
@@ -79,16 +78,16 @@ int print_num(va_list list)
 	if (n < 0)
 	{
 		_putchar('-');
-		n = n * - 1;
+		n = n * -1;
 	}
 	for (i = 1; i <= n; i *= 10)
 	{
 		count++;
-		i /= 10;
 	}
+		i /= 10;
 	for (; i > 0; i /= 10)
 	{
-		_putchar(((n / i)%10)+ '0');
+		_putchar(((n / i) % 10) + '0');
 	}
 	return (count);
 }
