@@ -46,6 +46,6 @@ int auxs(va_list list, char c)
 		j++;
 	}
 	_putchar('%');
-	_putchar(c);
+	_putchar('c');
 	return (2);
 }	
