@@ -22,10 +22,10 @@ int _printf(const char *format, ...)
 			count += auxs(list, format[y + 1]);
 		}
 		else
-			{
+		{
 			count += 1;
 			_putchar(format[y]);
-			}
+		}
 	}
 	va_end(list);
 	return (count);
