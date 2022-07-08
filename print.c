@@ -8,8 +8,8 @@ int _printf(const char *format, ...)
 {
 	va_list list;
 	int y, count;
-	
-	for(y = 0; format[y]; y++)
+
+	for (y = 0; format[y]; y++)
 	{
 		if (format[y] == '%' && (format[y + 1] == 0 || format[y + 1] == '%'))
 		{
@@ -48,4 +48,4 @@ int auxs(va_list list, char c)
 	_putchar('%');
 	_putchar(c);
 	return (2);
-}	
+}
