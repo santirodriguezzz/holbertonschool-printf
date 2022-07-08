@@ -10,12 +10,10 @@ int _printf(const char *format, ...)
 	int y, count = 0;
 
 	va_start(list, 0);
+
 	for (y = 0; format && format[y]; y++)
 	{
-		if (format[y + 1] == '\0')
-			return(-1);
-
-			if (format[y] == '%' && format[y + 1] == 0 || format[y + 1] == '%')
+		if (format[y] == '%' && format[y + 1] == 0 || format[y + 1] == '%')
 		{
 			_putchar('%');
 			y++;
