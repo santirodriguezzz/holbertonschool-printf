@@ -49,7 +49,8 @@ int auxs(va_list list, char c)
 		{'s', print_str},
 		{'c', print_ch},
 		{'%', print_per},
-		{'n', print_num},
+		{'d', print_num},
+		{'i', print_num},
 	};
 	int j = 0;
 

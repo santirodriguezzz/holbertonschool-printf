@@ -75,15 +75,13 @@ int print_num(va_list list)
 }
 /**
  * print_num - prints an int
- * @n: int
- * @i: int
+ * @list: argument
  * Return: int
  */
 int print_num(va_list list)
 {
 	int n = va_arg(list, int);
-	int i;
-	int count = 0;
+	int i, d, count = 0;
 
 	if (n == 0)
 		_putchar('0');
@@ -92,7 +90,7 @@ int print_num(va_list list)
 	if (n < 0)
 	{
 		_putchar('-');
-		n = n * - 1;
+		n = n * -1;
 	}
 	for (i = 1; i <= n; i *= 10)
 	{
@@ -101,7 +99,7 @@ int print_num(va_list list)
 	i /= 10;
 	for (; i > 0; i /= 10)
 	{
-		_putchar(((n / i)%10)+ '0');
+		_putchar(((n / i) % 10) + '0');
 	}
 	return (count);
 }
