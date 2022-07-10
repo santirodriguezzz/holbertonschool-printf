@@ -88,14 +88,5 @@ int print_num(va_list list)
 	{
 		_putchar(((n / i) % 10) + '0');
 	}
-	for (d = 1; d <= n; d *= 10)
-	{
-		count++;
-	}
-	d /= 10;
-	for (; d > 0; d /= 10)
-	{
-		_putchar(((n / d) % 10) + '0');
-	}
 	return (count);
 }
