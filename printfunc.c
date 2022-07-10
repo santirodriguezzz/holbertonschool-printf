@@ -67,8 +67,7 @@ int print_per(va_list list)
 int print_num(va_list list)
 {
 	int n = va_arg(list, int);
-	int i;
-	int count = 0;
+	int i, d, count = 0;
 
 	if (n == 0)
 	{
@@ -88,6 +87,15 @@ int print_num(va_list list)
 	for (; i > 0; i /= 10)
 	{
 		_putchar(((n / i) % 10) + '0');
+	}
+	for (d = 1; d <= n; d *= 10)
+	{
+		count++;
+	}
+	d /= 10;
+	for (; d > 0; d /= 10)
+	{
+		_putchar(((n / d) % 10) + '0');
 	}
 	return (count);
 }
