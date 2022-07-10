@@ -49,6 +49,7 @@ int auxs(va_list list, char c)
 		{'s', print_str},
 		{'c', print_ch},
 		{'%', print_per},
+		{'n', print_num},
 	};
 	int j = 0;
 
@@ -56,15 +57,9 @@ int auxs(va_list list, char c)
 	{
 		if (est[j].h == c)
 			return (est[j].x(list));
-			j++;
+		j++;
 	}
 	_putchar('%');
 	_putchar(c);
 	return (2);
 }
-/**
- *
- */
-int print_num(int n)
-{
-
