@@ -19,8 +19,8 @@ int _printf(const char *format, ...)
 	{
 		if (format[y] == '%' && (format[y + 1] == 0 || format[y + 1] == '%'))
 		{
-			_putchar('%');
 			y++;
+			_putchar('%');
 			count++;
 		}
 		else if (format[y] == '%')
@@ -41,7 +41,7 @@ int _printf(const char *format, ...)
  * auxs - auxiliar function
  * @c: char
  * @list: name of list of the function
- * Return: integer
+ * Return: int
  */
 int auxs(va_list list, char c)
 {
