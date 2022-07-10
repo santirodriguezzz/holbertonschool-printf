@@ -81,7 +81,7 @@ int print_num(va_list list)
 int print_num(va_list list)
 {
 	int n = va_arg(list, int);
-	int i, d, count = 0;
+	int i, count = 0;
 
 	if (n == 0)
 		_putchar('0');
