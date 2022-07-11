@@ -86,6 +86,7 @@ int print_num(va_list list)
 			}
 			return (22);
 		}
+		_putchar('-');
 		n = n * -1;
 		count++;
 	}
