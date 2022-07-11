@@ -78,6 +78,7 @@ int print_num(va_list list)
 	{
 		_putchar('-');
 		n = n * -1;
+		count++;
 	}
 	for (i = 1; i <= n; i *= 10)
 	{
