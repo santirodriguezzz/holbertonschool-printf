@@ -83,7 +83,7 @@ int print_num(va_list list)
 		n = n * -1;
 		count++;
 	}
-	for (i = 1; i <= n; i *= 10)
+	for (i = 1; i < n; i *= 10)
 	{
 		count++;
 	}
