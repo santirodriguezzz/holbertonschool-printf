@@ -9,7 +9,7 @@ int _printf(const char *format, ...)
 	va_list list;
 	int y, count = 0;
 
-	va_start(list, 0);
+	va_start(list, format);
 
 	if (format == NULL || !(strcmp(format, "%")))
 	{
@@ -54,7 +54,7 @@ int auxs(va_list list, char c)
 	};
 	int j = 0;
 
-	while (j < 3)
+	while (j < 5)
 	{
 		if (est[j].h == c)
 			return (est[j].x(list));

@@ -81,16 +81,26 @@ int print_num(va_list list)
 int print_num(va_list list)
 {
 	int n = va_arg(list, int);
-	int i, count = 0;
+	int i, j, count = 0;
 
 	if (n == 0)
 		_putchar('0');
 		return (1);
 	}
-	if (n < 0)
+	if (n < 0 || n == INT_MIN)
 	{
-		_putchar('-');
+		if (n == INT_MIN)
+		{
+			int arr[] = {2,1,4,7,4,8,3,6,4,8};
+			_putchar('-');
+			for (j = 0; j < 10; j++)
+			{
+				_putchar(arr[j]);
+			}
+			return (22);
+		}
 		n = n * -1;
+		count++;
 	}
 	for (i = 1; i <= n; i *= 10)
 	{
