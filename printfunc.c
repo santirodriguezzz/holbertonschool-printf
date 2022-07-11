@@ -1,4 +1,5 @@
 #include "main.h"
+#include <limits.h>
 /**
 * print_ch - prints char
 * @list: list of functions
