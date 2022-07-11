@@ -1,0 +1,6 @@
+#include "main.h"
+void main()
+{
+	_printf("%d", 21474836472147483647);
+}
+
