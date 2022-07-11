@@ -1,5 +1,4 @@
 #include "main.h"
-#include <limits.h>
 /**
 * print_ch - prints char
 * @list: list of functions
@@ -75,9 +74,12 @@ int print_num(va_list list)
 		_putchar('0');
 		return (1);
 	}
-	if (n < 0)
+	if (n < 0 || n == INT_MIN)
 	{
-		_putchar('-');
+		if (n != INT_MIN)
+		{
+			_putchar('-');
+		}
 		n = n * -1;
 		count++;
 	}
